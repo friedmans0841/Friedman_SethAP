@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class APLab_04
+{
+	public static void main(String[]args)
+	{
+		APLab_04 form = new APLab_04();
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>\t");
+		
+		System.out.println("Please enter item 1:");
+		String word1 = keyboard.nextLine();
+		System.out.println("Please enter the price:");
+		double num1 = keyboard.nextDouble();
+		
+		
+		System.out.println("Please enter item 2:");
+		String word2 = keyboard.nextLine();
+		String blank1 = keyboard.nextLine();
+		System.out.println("Please enter price 2:");
+		double num2 = keyboard.nextDouble();
+		
+		
+		System.out.println("Please enter item 3:");
+		String word3 = keyboard.nextLine();
+		String blank2 = keyboard.nextLine();
+		System.out.println("Please enter price 3:");
+		double num3 = keyboard.nextDouble();
+		
+		System.out.println("Please enter item 4:");
+		String word4 = keyboard.nextLine();
+		String blank3 = keyboard.nextLine();
+		System.out.println("Please enter price 4:");
+		double num4 = keyboard.nextDouble();
+		
+		System.out.println("<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>\t");
+		form.format(word1, num1);
+		form.format(word2, num2);
+		form.format(word3, num3);
+		
+
+		
+		
+	}
+	
+	public void format(String word, double num)
+	{
+		System.out.printf("\n%5s %5.2f", word, num);
+	}
+}
