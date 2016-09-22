@@ -49,12 +49,10 @@ public class APLab_04
 		
 		
 
-		
-		
 	}
 	
 	public void format(String word, double num)
 	{
-		System.out.printf("\n%15s %15.2f", word, num);
+		System.out.printf("\n%-15s %.2f", word, num);
 	}
 }
