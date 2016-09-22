@@ -29,19 +29,19 @@ public class APLab_04
 		
 		System.out.println("<<<<<<<<<<<<<<<<<_Receipt_>>>>>>>>>>>>>>>>>>>\t");
 		
-		form.format("* " + word1, num1);
-		form.format("* " + word2, num2);
-		form.format("* " + word3, num3);
+		form.format(word1, num1);
+		form.format(word2, num2);
+		form.format(word3, num3);
 		System.out.println(" ");
 		System.out.println(" ");
 		double sub = (num1 + num2 + num3);
-		form.format("* " + " Subtotal: " + " ........ ", sub);
+		form.format("Subtotal:", sub);
 		double tax = (sub * .075);
-		form.format("* " + " Tax: " + " ........ ", tax);
+		form.format("Tax:", tax);
 		double  total = (sub + tax);
-		form.format("* " + " Total: " + " ........ ", total);
+		form.format("Total:", total);
         System.out.println(" ");
-		System.out.println("_________________________________________________");
+		System.out.println("________________________________________________");
 		System.out.println("* Thank you for your support *");
 		
 		
@@ -53,6 +53,6 @@ public class APLab_04
 	
 	public void format(String word, double num)
 	{
-		System.out.printf("\n%-15s %.2f", word, num);
+		System.out.printf("\n*%30s ....... %.2f", word, num);
 	}
 }
