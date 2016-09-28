@@ -7,24 +7,20 @@ public class APLab_04Pt_03
 		APLab_04Pt_03 intrest = new APLab_04Pt_03();
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Intrest rate in decimal form:");
-		double r = keyboard.nextDouble();
+		double rate = keyboard.nextDouble();
 		System.out.println("Principle:");
-		int p = keyboard.nextInt();
+		double princpl = keyboard.nextDouble();
 		System.out.println("Number of times the loan is compounded per year:");
-		int n = keyboard.nextInt();
+		double number = keyboard.nextDouble();
 		System.out.println("life of the loan (in years):");
-		int t = keyboard.nextInt();
-		double loan = intrest.rate(r, p, n, t);
-		System.out.println("Your total monthly payment is $", loan);
+		double time = keyboard.nextDouble();
+		double loan = intrest.irate(rate, princpl, number, time);
+		System.out.printf("Your total monthly payment is %.2f", loan);
 		
 	}
 	
-	public double rate(double r, int p, int n, int t)
+	public double irate(double r, double p, double n, double t)
 	{
-		return (number3 * number4);
-		double number1 = (1+(r / n));
-		double number2 = (n * t);
-		double number3 = (p);
-		double number4 = Math.pow(number1, number2);
+		return (p*(Math.pow(1+r/n, n * t)))/(t*12); 
 	}
 }
