@@ -1,12 +1,14 @@
 import java.util.Scanner;
-public class Lab_04_2Ex_01
+public class Rectangle
 {
 	static int l, w;
 	static int perimeter;
+	Rectangle form = new Rectangle();
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
+		
 		System.out.println("Enter the length:");
 		l = kb.nextInt();
 		System.out.println("enter the width:");
