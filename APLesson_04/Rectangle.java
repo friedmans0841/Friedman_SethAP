@@ -13,11 +13,11 @@ public class Rectangle
 		l = kb.nextDouble();
 		System.out.println("Enter the width:");
 		w = kb.nextDouble();
-		calcPerim(l,w);
+		calcPerim();
 		print();
 	}
 	
-	public static void calcPerim(double l, double w)
+	public static void calcPerim()
 	{
 		calcPerim = 2 * (l + w);
 	}

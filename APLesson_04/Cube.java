@@ -11,6 +11,7 @@ public class Cube
 		side = kb.nextDouble();
 		calcSurf();
 		print();
+		print1();
 	}
 	
 	public static void calcSurf()
@@ -23,5 +24,10 @@ public class Cube
 		System.out.printf("The surface area of a cube whose sides are " + side + " in legnth is %.5f", sa);
 	}
 	
+	public static void print1()
+	{
+		int num = 7 % 3;
+		System.out.println(num);
+	}
 	
 }
