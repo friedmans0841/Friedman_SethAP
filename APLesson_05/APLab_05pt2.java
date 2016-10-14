@@ -23,8 +23,8 @@ public class APLab_05pt2
 		double subtotal = price1 + price2 + price3 + price4;
 		double discount = calcDisc(subtotal);
 		double tax = subtotal * 0.08;
-		double total - discount + tax;
-		System.out.println("<<<<<<< receipt >>>>>>>");
+		double total = subtotal - discount + tax;
+		System.out.println("<<<<<<<<<<<<<< receipt >>>>>>>>>>>>>>");
 		format(item1, price1);
 		format(item2, price2);
 		format(item3, price3);
@@ -34,7 +34,7 @@ public class APLab_05pt2
 		format("Tax ", tax);
 		format("Total", total);
 		System.out.println(" ");
-		System.out.println("_______________________");
+		System.out.println("_____________________________________");
 		System.out.println("* Thank you for your support *");
 	}
 	
@@ -47,6 +47,6 @@ public class APLab_05pt2
 	
 	public static void format(String item, double price)
 	{
-		System.out.printf("\n*%30s ....... %.2f", item, num);
+		System.out.printf("\n*%-20s ....... %.2f", item, price);
 	}
 }
