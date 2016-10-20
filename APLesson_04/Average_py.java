@@ -15,13 +15,13 @@ public class Average_py
 		num2 = kb.nextInt();
 		System.out.println("enter value three:");
 		num3 = kb.nextInt();
-		ave(num1,num2,num3);
+		ave();
 		print();
 		
 		
 		
 	}
-	public static void ave(double num1, double num2, double num3)
+	public static void ave()
 	{
 		ave = (num1 + num2 + num3)/3;
 	}

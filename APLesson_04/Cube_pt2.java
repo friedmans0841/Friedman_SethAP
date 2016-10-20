@@ -18,7 +18,7 @@ public class Cube_pt2
 	
 	public static void print(double side, double sa)
 	{
-		System.out.printf("The surface area of a cube whose sides are " + side + " in legnth is " + sa);
+		System.out.printf("The surface area of a cube whose sides are " + side + " in legnth is %.5f", sa);
 	}
 	
 	

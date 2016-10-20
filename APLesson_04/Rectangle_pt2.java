@@ -11,7 +11,6 @@ public class Rectangle_pt2
 		System.out.println("Enter the width:");
 		double w = kb.nextDouble();
 		double perim = calcPerim(l,w);
-		
 		print(perim);
 	}
 	
