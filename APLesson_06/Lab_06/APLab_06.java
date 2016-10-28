@@ -1,10 +1,18 @@
+import java.util.Scanner;
 public class APLab_06
 {
+	static Scanner kb;
+	
 	public static void main(String[]args)
 	{
-		for (int i = 0; i <=5; i-=1000000000)
+		kb = new Scanner(System.in);
+		System.out.println("Please enter a int: ");
+		int num = kb.nextInt();
+		System.out.println("Please enter how much you want to go up by: ");
+		int up = kb.nextInt();
+		for(int i = 0; i <= num; i += up)
 		{
-			System.out.println(i);
+			System.out.print(i + " ");
 		}
 	}
 }
