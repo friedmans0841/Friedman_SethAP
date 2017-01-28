@@ -6,7 +6,7 @@ public class APLab_09pt5
 	{
 		int [] numbers = new int[10];
 		fillArray(numbers);
-		System.out.println("For the following numbers... " + printArray(numbers) + ".");
+		System.out.println("For the following numbers... " + printArray(numbers) + ":");
 		System.out.println(getOdds(numbers) + " ...are all the odd numbers.");
 	}
 	

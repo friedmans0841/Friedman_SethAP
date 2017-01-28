@@ -6,15 +6,6 @@ public class APLab_12pt6
 	private int price;
 	private long UPC;
 	
-	public Inventory()
-	{
-		manufacturer = "";
-		name = "";
-		category = "";
-		UPC = 0;
-		price = 0;
-	}
-	
 	public Inventory(String man, String nam)
 	{
 		manufacturer = man;
@@ -33,23 +24,34 @@ public class APLab_12pt6
 		UPC = Math.abs((long)(Math.random() * 10000000000L) + 1);
 	}
 	
+	public Inventory()
+	{
+		manufacturer = "";
+		name = "";
+		category = "";
+		UPC = 0;
+		price = 0;
+	}
+	
 	public String toString()
 	{
 		return "\nInventory Items..." +
-							"\nItem Name: " + name +
-							"\nManufacturer: " + manufacturer +
-                            "\nCategory: " + category +
-                            "\nUPC: " + UPC +
-							"\nPrice: " + price;
+			"\nItem Name: " + name +
+			"\nManufacturer: " + manufacturer +
+            "\nCategory: " + category +
+            "\nUPC: " + UPC +
+			"\nPrice: " + price;
 	}
 	
-	public String getManufacturer()
-	{
-		return manufacturer;
-	}
+	
+	
 	public String getName()
 	{
 		return name;
+	}
+	public int getPrice()
+	{
+		return price;
 	}
 	public String getCategory()
 	{
@@ -59,8 +61,8 @@ public class APLab_12pt6
 	{
 		return UPC;
 	}
-	public int getPrice()
+	public String getManufacturer()
 	{
-		return price;
+		return manufacturer;
 	}
 }

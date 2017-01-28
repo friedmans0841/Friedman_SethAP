@@ -1,5 +1,3 @@
-
-
 public class APLab_09pt3
 {	
 	static int average = 0;
