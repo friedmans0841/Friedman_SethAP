@@ -15,7 +15,7 @@ public class APLab_12pt6
 		UPC = Math.abs((long)(Math.random() * 10000000000L) + 1);
 	}
 	
-	public Inventory(String man, String nam, String cat, int p)
+	public static void Inventory(String man, String nam, String cat, int p)
 	{
 		manufacturer = man;
 		name = nam;
