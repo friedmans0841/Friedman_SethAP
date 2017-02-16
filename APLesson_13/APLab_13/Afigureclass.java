@@ -17,11 +17,10 @@ public class Afigureclass extends toyclass
 	public String getName()
 	{
 		return name;
-	
 	}
 	
 	public String getType()
 	{
-		return type= "Action Figure";
+		return type = "Action Figure";
 	}
 }

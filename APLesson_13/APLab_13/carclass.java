@@ -2,9 +2,9 @@ public class carclass extends toyclass
 {
 	private String name;
 	private int count;
-	private String type
+	private String type;
 	
-	public Car(0
+	public Car()
 	{
 		super();
 	}

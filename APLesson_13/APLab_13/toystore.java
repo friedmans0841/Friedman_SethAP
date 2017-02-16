@@ -6,12 +6,12 @@ public class toystore
 {
 	ArrayList<Toy> toyList;
 	
-	public void ToyStore()
+	public ToyStore()
 	{
 		toyList = new ArrayList<Toy>();
 	}
 	
-	public void ToyStore(String t)
+	public ToyStore(String t)
 	{
 		loadToys(t);
 	}
@@ -56,7 +56,7 @@ public class toystore
 		return null;
 	}
 	
-	public String getMostFrequentToy()
+	public String getMostFreqToy()
 	{
 		String name = "";
 		double max = Integer.MIN_VALUE;
@@ -71,7 +71,7 @@ public class toystore
 		return name;
 	}
 	
-	public String getMostFrequentType()
+	public String getMostFreqType()
 	{
 		int cars = 0;
 		int figures = 0;

@@ -3,7 +3,7 @@ public abstract class toyclass
 	private String name;
 	private double count;
 	
-	public Toy(0)
+	public void Toy()
 	{
 		this.name = "";
 		this.count = 1;
@@ -35,7 +35,7 @@ public abstract class toyclass
 		return count;
 	}
 	
-	public String toString();
+	public String toString()
 	{
 		return name + "\t...\t" + count;
 	}
