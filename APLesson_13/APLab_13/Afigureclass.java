@@ -4,12 +4,12 @@ public class Afigureclass extends toyclass
 	private int count;
 	private String type;
 	
-	public Afigure()
+	public void Afigure()
 	{
 		super();
 	}
 	
-	public Afigure(String n)
+	public void Afigure(String n)
 	{
 		super(n);
 	}
@@ -20,7 +20,7 @@ public class Afigureclass extends toyclass
 	
 	}
 	
-	public String getType
+	public String getType()
 	{
 		return type= "Action Figure";
 	}
