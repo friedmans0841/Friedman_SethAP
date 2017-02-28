@@ -1,26 +1,17 @@
-public class Afigureclass extends toyclass
+public class AFigureClass extends ToyClass
 {
-	private string name;
-	private int count;
-	private String type;
-	
-	public void Afigure()
+	public AFigureClass()
 	{
 		super();
 	}
 	
-	public void Afigure(String n)
+	public AFigureClass(String n)
 	{
 		super(n);
 	}
 	
-	public String getName()
-	{
-		return name;
-	}
-	
 	public String getType()
 	{
-		return type = "Action Figure";
+		return "Action Figure";
 	}
 }

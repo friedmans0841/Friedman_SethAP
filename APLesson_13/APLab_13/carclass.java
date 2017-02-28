@@ -1,27 +1,17 @@
-public class carclass extends toyclass
+public class CarClass extends ToyClass
 {
-	private String name;
-	private int count;
-	private String type;
-	
-	public Car()
+	public CarClass()
 	{
 		super();
 	}
 	
-	public Car(String n)
+	public CarClass(String n)
 	{
 		super(n);
 	}
 	
-	public String getName()
+	public String getType()
 	{
-		return name;
+		return "Car";
 	}
-	
-	public string getType()
-	{
-		return type = "Car";
-	}
-	
 }

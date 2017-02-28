@@ -1,42 +1,17 @@
-public abstract class toyclass
+public class AFigureClass extends ToyClass 
 {
-	private String name;
-	private double count;
-	
-	public void Toy()
+	public AFigureClass()
 	{
-		this.name = "";
-		this.count = 1;
+		super();
 	}
 	
-	public void Toy(String n)
+	public AFigureClass(String n)
 	{
-		this.name = n;
-		this.count = 1;
+		super(n);
 	}
 	
-	public void setName(String n)
+	public String getType()
 	{
-		this.name = n;
-	}
-	
-	public void setCount(double c)
-	{
-		this.count = c;
-	}
-	
-	public String getName()
-	{
-		return name;
-	}
-	
-	public double getCount()
-	{
-		return count;
-	}
-	
-	public String toString()
-	{
-		return name + "\t...\t" + count;
+		return "Action Figure";
 	}
 }
