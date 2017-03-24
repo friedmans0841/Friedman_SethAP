@@ -1,11 +1,11 @@
-public class AFigureClass extends ToyClass
+public class Afigureclass extends toyclass
 {
-	public AFigureClass()
+	public Afigureclass()
 	{
 		super();
 	}
 	
-	public AFigureClass(String n)
+	public Afigureclass(String n)
 	{
 		super(n);
 	}

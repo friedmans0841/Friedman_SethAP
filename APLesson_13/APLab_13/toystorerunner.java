@@ -1,4 +1,4 @@
-public class ToyStoreRunner
+public class toystorerunner
 {
 	public static void main(String[]args)
 	{

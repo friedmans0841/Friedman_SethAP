@@ -1,11 +1,11 @@
-public class CarClass extends ToyClass
+public class carclass extends toyclass
 {
-	public CarClass()
+	public carclass()
 	{
 		super();
 	}
 	
-	public CarClass(String n)
+	public carclass(String n)
 	{
 		super(n);
 	}

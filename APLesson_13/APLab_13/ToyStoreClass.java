@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class ToyStoreClass
 { 
-	ArrayList<ToyClass> TList = new ArrayList<ToyClass>();
+	ArrayList<toyclass> TList = new ArrayList<toyclass>();
 	
 	public ToyStoreClass()
 	{
-		TList = new ArrayList<ToyClass>();
+		TList = new ArrayList<toyclass>();
 	}
 	
 	public ToyStoreClass(String t)
@@ -18,24 +18,24 @@ public class ToyStoreClass
 	
 	public void loadToys(String ts)
 	{
-		TList = new ArrayList<ToyClass>();
+		TList = new ArrayList<toyclass>();
 		ArrayList<String> toys = new ArrayList<>(Arrays.asList(ts.split(", ")));
 		for(int i = 0; i < toys.size(); i+=2)	
 		{
 			String name = toys.get(i);
 			String type = toys.get(i+1); 
-			ToyClass t = getToy(name);
+			toyclass t = getToy(name);
 			
 			if (t == null)	
 			{
 				if(type.equals("Car"))
 				{
-					TList.add(new CarClass(name));
+					TList.add(new carclass(name));
 				}
 				
 				else
 				{
-					TList.add(new AFigureClass(name));
+					TList.add(new Afigureclass(name));
 				}
 			}
 			
@@ -47,9 +47,9 @@ public class ToyStoreClass
 		}
 	}
 	
-	public ToyClass getToy(String TJ)
+	public toyclass getToy(String TJ)
 	{
-		for(ToyClass x : TList)	
+		for(toyclass x : TList)	
 		{
 			if(x.getName().equals(TJ))
 			{
@@ -63,7 +63,7 @@ public class ToyStoreClass
 	{
 		String name = "";
 		double max = Integer.MIN_VALUE;
-		for(ToyClass x: TList)	
+		for(toyclass x: TList)	
 		{
 			if(max < x.getCount())
 			{
@@ -78,7 +78,7 @@ public class ToyStoreClass
 	{
 		int cars = 0;
 		int figures = 0;
-		for(ToyClass x:TList)	
+		for(toyclass x:TList)	
 		{
 			if(x.getType().equals("Car"))
 				cars++;
