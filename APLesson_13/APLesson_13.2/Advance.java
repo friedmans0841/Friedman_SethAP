@@ -1,16 +1,16 @@
 public class Advance extends Ticket
 {
-	private int daysLeft;
+	private int DaysLeft;
 	
-	public Advance(int dl)
+	public Advance(int DL)
 	{
 		super();
-		daysLeft = dl;
+		DaysLeft = DL;
 	}
 	
 	public double getPrice()
 	{
-		if (daysLeft >= 10)
+		if (DaysLeft >= 10)
 		{
 			return 30.00;
 		}

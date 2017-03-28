@@ -1,4 +1,4 @@
-public class PlayStation extends Console
+public class PlayStation extends console
 {
 	public PlayStation()
 	{

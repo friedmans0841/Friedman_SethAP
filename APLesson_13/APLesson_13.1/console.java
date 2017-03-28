@@ -1,4 +1,4 @@
-public abstract class console extends gameSystem
+public abstract class console extends GameSystem
 {
 	public console()
 	{
@@ -10,10 +10,10 @@ public abstract class console extends gameSystem
 		super(n);
 	}
 	
-	public abstract String getcontroller();
+	public abstract String getController();
 	
 	public String toString()
 	{
-		return "Platform: " + getPlatform() + "\nserial #: " + super.getSerialNo() + "\nController " + getcontroller();
+		return "Platform: " + getPlatform() + "\nserial #: " + getSerialNo() + "\nController " + getController();
 	}
 }

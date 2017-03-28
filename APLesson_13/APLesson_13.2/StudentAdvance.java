@@ -1,8 +1,8 @@
 public class StudentAdvance extends Advance
 {
-	public StudentAdvance(int dl)
+	public StudentAdvance(int DL)
 	{
-		super(dl);
+		super(DL);
 	}
 	
 	public double getPrice()

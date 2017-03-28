@@ -22,7 +22,7 @@ public abstract class GameSystem
 		this.platform = p;
 	}
 	
-	public void setSerialNo(int sn)
+	public void getSerialNo(int sn)
 	{
 		this.serialNo = sn;
 	}
