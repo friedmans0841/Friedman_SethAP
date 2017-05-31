@@ -1,4 +1,4 @@
-public class MagpiePart2
+public class MagpiePart3
 {
 	/** Get a default greeting @return a greeting*/
 	public String getGreeting()
@@ -11,7 +11,7 @@ public class MagpiePart2
 	 * 	Gives a response to a user statement
 	 *  @param statement (the user statement)
 	 * 	@return a response based on the rules given */
-	
+	 
 	public String getResponse(String statement)
 	{
 		String response = "";
@@ -32,6 +32,7 @@ public class MagpiePart2
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
+		 
 		else if (findKeyword(statement, "no") >= 0)
 		{
 			response = "Why so negative?";
@@ -66,14 +67,17 @@ public class MagpiePart2
 
 		else
 		{
-		// Look for a two word (you <something> me)
-		// pattern
-		
 		int psn = findKeyword(statement, "you", 0);
+		int psn2 = findKeyword(statement, "I", 0);
 
 			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
 				{
 					response = transformYouMeStatement(statement);
+				}
+				
+			else if (psn2 >= 0 && findKeyword(statement, "you", psn) >= 0)
+				{
+					response = transformIYouStatement(statement);
 				}
 			else
 				{
@@ -99,7 +103,7 @@ public class MagpiePart2
 	* @param statement the user statement, assumed to contain "I want to"
 	* @return the transformed statement
 	*/
-	
+
 	private String transformIWantToStatement(String statement)
 	{
 		statement.trim();
@@ -111,10 +115,10 @@ public class MagpiePart2
 			statement = statement.substring(0, stLength - 1);
 		}
 		
-		int psn = findKeyword(statement, "I want to. ");
+		int psn = findKeyword(statement, "I want to");
 		String restOfStatement = statement.substring(psn + 10, statement.length());
 		
-		return "What would it mean to" + restOfStatement + "?";
+		return "What would it mean to " + restOfStatement + "?";
 		
 	  /**
 	   * trim the statement
@@ -149,10 +153,9 @@ public class MagpiePart2
 		
 		int psnOfYou = findKeyword(statement, "you");
 		int psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
-		
 		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe);
 		
-		return "What makes you think that I " + restOfStatement + "you?"; 
+		return " What makes you think that I " + restOfStatement + " you? "; 
 		
 	  /**
 	   * trim the statement
@@ -171,14 +174,33 @@ public class MagpiePart2
 	   * */
 	}
 	
+	private String transformIYouStatement(String statement)
+	{
+		statement.trim();
+		int stLength = statement.length();
+		String lastChar = statement.substring(stLength - 1, stLength);
+		
+		if (lastChar.equals("."))
+		{
+			statement = statement.substring(0, stLength - 1);
+		}
+		
+		int psnOfI = findKeyword(statement, "I");
+		int psnOfYou = findKeyword(statement, "You", psnOfI + 1);
+		
+		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou);
+		
+		return "Why do you" + restOfStatement + "me?";
+	}
+	
 	/** Ex_02: The findKeyword() Method...
 	 * ========================================================= */
+	
 	private int findKeyword(String statement, String goal, int startPos)
 	{
 		String phrase = "";
 		phrase = statement.toLowerCase().trim();
 		goal = goal.toLowerCase();
-		//phrase.toLowerCase();
 		
 		int psn = 0;
 		psn = phrase.indexOf(goal, startPos);
@@ -208,7 +230,6 @@ public class MagpiePart2
 				return findKeyword(phrase, goal, psn + 1);
 			}
 		}
-		
 		return -1;
 	}
 		
@@ -238,9 +259,9 @@ public class MagpiePart2
 				Otherwise, search for goal in phrase from psn + 1 forward */
 
 	/** Override - this method is used if there are only 2 parameters...*/
+	
 	private int findKeyword(String statement, String goal)
 	{
-		//set startPos to 0 if not specified
 		String newg = goal.toLowerCase();
 		return findKeyword(statement, newg, 0);
 	}
@@ -260,11 +281,11 @@ public class MagpiePart2
 		if (whichResponse == 0)
 			response = "Interesting, tell me more.";
 		else if (whichResponse == 1)
-			response = "Hmmm...";
+			response = "Hmmm.....";
 		else if (whichResponse == 2)
 			response = "Do you really think so?";
 		else if (whichResponse == 3)
-			response = "You don't say.";
+			response = "You don't say!";
 
 		return response;
 	}
