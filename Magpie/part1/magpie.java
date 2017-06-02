@@ -1,5 +1,5 @@
 public class magpie
- {
+{
  	/** Get a default greeting @return a greeting*/
  	public String getGreeting()
  	{
@@ -11,6 +11,7 @@ public class magpie
  	 * 	Gives a response to a user statement
  	 *  @param statement (the user statement)
  	 * 	@return a response based on the rules given */
+	 
  	public String getResponse(String statement)
  	{
  		String response = "";
@@ -172,4 +173,4 @@ public class magpie
  
  		return response;
  	}
- }
+}
