@@ -57,7 +57,6 @@ public class PictureTester
     redMoto.explore();
   }
   
-  /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("temple.jpg");
@@ -66,32 +65,22 @@ public class PictureTester
     temple.explore();
   }
   
-  public static void testMirrorVertical()
-  {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVertical();
-    caterpillar.explore();
-  }
-  
   public static void testMirrorVerticalRightToLeft()
   {
-	Picture canvas = new Picture("koala.jpg");
-    koala.explore();
-    koala.mirrorVerticalRightToLeft();
-    koala.explore();
+	Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
   }
   
   public static void testMirrorArms()
   {
 	Picture snowman = new Picture("snowman.jpg");
-	Picture gull = new Picture("seagull.jpg");
     snowman.explore();
     snowman.mirrorArms();
     snowman.explore();
   }
   
-  /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
@@ -108,17 +97,25 @@ public class PictureTester
   
   public static void testCopy()
   {
-	Picture caterpillar = new Picture("caterpillar.jpg");
+	Picture canvas = new Picture("koala.jpg");
     canvas.copy(canvas, 60, 100);
     canvas.explore();
   }
   
    public static void testMirrorGull()
   {
-	Picture snowman = new Picture("snowman.jpg");
+	Picture gull = new Picture("seagull.jpg");
 	gull.explore();
 	gull.mirrorGull();
 	gull.explore();
+  }
+  
+  public static void testMirrorVertical()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVertical();
+    caterpillar.explore();
   }
   
   public static void testCopyPart()
